@@ -98,7 +98,7 @@ function get-all-seller-asins($sellerID, $apiKey, $asinListPath){
 
         $pages = $result.totalResults / 100
 
-        while($page -lt $pages){
+        while($page -lt $pages -and $page -lt 100){
         
             wait-for-keepa-tokens -apiKey $apiKey -numberOfTokens 100
 
